@@ -1,0 +1,44 @@
+import turtle
+
+# Configuración inicial de la tortuga
+turtle.speed(5)  # Velocidad moderada
+turtle.pensize(2) # Grosor de la línea
+turtle.color("purple") # Color de la línea
+
+# Define la longitud de cada segmento de punto y el espacio entre ellos
+dot_length = 5
+space_length = 5
+num_dots = 20 # Número de puntos que queremos en la línea
+
+# Dibuja la línea punteada usando un ciclo for
+for _ in range(num_dots):
+    turtle.pendown()  # Baja el lápiz para dibujar el punto
+    turtle.forward(dot_length) # Dibuja el segmento del punto
+    turtle.penup()    # Levanta el lápiz para el espacio
+    turtle.forward(space_length) # Mueve la tortuga sin dibujar
+
+turtle.penup()
+turtle.goto(0,-30)
+turtle.pendown()
+
+
+
+
+turtle.speed(5)  # Velocidad moderada
+turtle.pensize(2) # Grosor de la línea
+turtle.color("blue") # Color de la línea
+
+# Define la longitud de cada segmento de punto y el espacio entre ellos
+dot2_length = 2
+space_length = 5
+num2_dots = 18 # Número de puntos que queremos en la línea
+
+# Dibuja la línea punteada usando un ciclo for
+for _ in range(num2_dots):
+    for new in range(dot2_length,22,1):
+        turtle.pendown()  # Baja el lápiz para dibujar el punto
+        turtle.forward(new) # Dibuja el segmento del punto
+        turtle.penup()    # Levanta el lápiz para el espacio
+        turtle.forward(space_length) # Mueve la tortuga sin dibujar
+    if (num2_dots == 18):
+        turtle.done()
